@@ -41,4 +41,92 @@ footer li {
     color: white;
 }
 
+.workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "gridImage1 gridImage1 description1"
+                         "description2 gridImage2 gridImage2"
+                         "gridImage3 gridImage3 description3";
+    gap: 20px;    
+}
+
+@media only screen and (max-width:600) {
+    .workGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "gridImage1"
+            "description1"
+            "gridImage2"
+            "description2"
+            "gridImage3"
+            "description3"
+            ;
+    }
+}
+
+#gridImage1 {
+    grid-area: gridImage1;
+    background-image: url("../images/Hami\ Canada\ Redesign\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+#gridImage2 {
+    grid-area: gridImage2;
+    background-image: url("../images/CBSA.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+
+}
+
+#gridImage3 {
+    grid-area: gridImage3;
+    background-image: url("../images/GoFly.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+#description1 {
+    grid-area: description1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#description2 {
+    grid-area: description2;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#description3 {
+    grid-area: description3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gridButton {
+    width: fit-content;
+}
+
+.myWorkTitle {
+    text-align: center;
+}
+
+.projectsTitle {
+    text-align: center;
+}
 
